@@ -10,7 +10,8 @@
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
     margin-top: 0.8rem;
-    display: inline-block;
+    margin-bottom: 0.5rem;
+
 }
 
 
@@ -76,4 +77,18 @@ html,body{
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
+}
+
+/*.header_search {*/
+/*    margin-bottom: 0.5rem;*/
+
+/*}*/
+
+.index_search_btn {
+    color: white;
+    background-color: dimgrey;
+    opacity: 80%;
+    width: 6rem;
+    border-radius: 5px;
+
 }

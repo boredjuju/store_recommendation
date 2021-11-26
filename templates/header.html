@@ -1,8 +1,8 @@
 
 
 <div class="header">
-    <div >
-        <div style="display: inline-block; margin: 0 0.5rem">
+    <div style="display: flex; align-items: flex-end;">
+        <div style="margin: 0 0.5rem">
             <h3 class="shindo_logo">GwangShinDo's Pick!</h3>
         </div>
         <div class="shindo_nav">
@@ -10,6 +10,34 @@
             <span style="margin-right: 0.3rem;">ABOUT</span>
             <span style="margin-right: 0.3rem;">PICK</span>
             <span>SIGN UP</span>
+        </div>
+        <div style="width: 20rem;">
+        </div>
+        <div class="header_search">
+            <form action="/article/search/" method="post">
+                {% csrf_token %}
+                <div>
+                    <select name="region_input">
+                        <option>지역</option>
+                            <option>경기,서울</option>
+                            <option>인천</option>
+                            <option>부산</option>
+                            <option>대구</option>
+                            <option>광주</option>
+                            <option>대전</option>
+                            <option>울산</option>
+
+                    </select>
+                    <input type="text" name="addr_input">
+                </div>
+                <div style="display: flex; justify-content: flex-end;">
+                    <input type="text" name="menu_input">
+                    <input type="submit" class="btn btn-primary" value="search">
+                </div>
+                <div>
+
+                </div>
+            </form>
         </div>
         <div>
 

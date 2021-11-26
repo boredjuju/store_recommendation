@@ -12,18 +12,18 @@
             <p class="index_logo">GwangShinDo's Pick!</p>
         </div>
         <div>
-            <form action="/account/index/" method="post" class="search_button">
+            <form action="/article/search/" method="post" class="search_button">
                 {% csrf_token %}
                 <div>
-                    <select>
+                    <select name="region_input">
                         <option>지역</option>
-                                                <option>경기,서울</option>
-                                                <option>인천</option>
-                                                <option>부산</option>
-                                                <option>대구</option>
-                                                <option>광주</option>
-                                                <option>대전</option>
-                                                <option>울산</option>
+                            <option>경기,서울</option>
+                            <option>인천</option>
+                            <option>부산</option>
+                            <option>대구</option>
+                            <option>광주</option>
+                            <option>대전</option>
+                            <option>울산</option>
 
                     </select>
                     <input type="text" name="addr_input">
@@ -32,7 +32,7 @@
                     <input type="text" name="menu_input">
                 </div>
                 <div>
-                    <input type="submit" class="btn btn-primary" value="POST">
+                    <input type="submit" class="index_search_btn" value="search">
                 </div>
             </form>
 
