@@ -15,7 +15,7 @@
             <form action="/article/search/" method="post" class="search_button">
                 {% csrf_token %}
                 <div>
-                    <select name="region_input">
+                    <select name="region_input" class="index_search_bar">
                         <option>지역</option>
                             <option>경기,서울</option>
                             <option>인천</option>
@@ -26,10 +26,10 @@
                             <option>울산</option>
 
                     </select>
-                    <input type="text" name="addr_input">
+                    <input type="text" name="addr_input" class="index_search_bar" placeholder="동을 입력해주세요">
                 </div>
                 <div>
-                    <input type="text" name="menu_input">
+                    <input type="text" name="menu_input" class="index_search_bar" placeholder="메뉴를 입력해주세요">
                 </div>
                 <div>
                     <input type="submit" class="index_search_btn" value="search">

@@ -22,6 +22,7 @@ def index(request):
         new_history.region = region_input
         new_history.save()
 
+
         return render(request, 'articleapp/search.html', context={'history_output': new_history})
     else:
         return render(request, 'articleapp/index.html')

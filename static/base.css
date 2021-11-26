@@ -1,23 +1,27 @@
 
 
 .shindo_logo {
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     font-family: 'Yuji Syuku', serif;
+    margin: 0 0;
 }
 
 
 .shindo_nav {
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-top: 0.8rem;
-    margin-bottom: 0.5rem;
+    /*margin-top: 0.8rem;*/
+
 
 }
 
 
 .footer {
+    height: 5rem;
     text-align: left;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -28,11 +32,16 @@
     margin-bottom: 1rem;
 }
 
-.footer_team {
+.footer_logo {
+    font-family: 'Yuji Syuku', serif;
+    margin: 0 0;
+}
+
+.footer_nav {
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Noto Sans KR', sans-serif;
-    margin: 0.5rem 0;
+    margin: 0.6rem 0;
 }
 
 
@@ -40,8 +49,8 @@
     text-align: left;
     font-size: 12px;
     font-family: 'Noto Sans KR', sans-serif;
-    color: lightgray;
-    margin: 0.4rem 0;
+    color: rgba(149, 149, 149, 1);
+    margin: 0 0;
 }
 
 
@@ -77,18 +86,113 @@ html,body{
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+
 }
 
-/*.header_search {*/
-/*    margin-bottom: 0.5rem;*/
-
-/*}*/
 
 .index_search_btn {
     color: white;
-    background-color: dimgrey;
-    opacity: 80%;
+    background-color: rgba(28, 34, 29, 0.80);
     width: 6rem;
     border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    border: none;
+}
+.index_search_btn:hover {
+    color: black;
+    background-color: rgba(205, 211, 206, 0.80);
+    width: 6rem;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    border: none;
+}
 
+
+
+.index_search_bar {
+    color: white;
+    background-color: rgba(28, 34, 29, 0.80);
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border: none;
+}
+.index_search_bar:hover {
+    color: black;
+    background-color: rgba(205, 211, 206, 0.80);
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+
+
+.header_search_select {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    text-align: center;
+    padding: 1px 5px;
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width: 1px;
+    margin-right: 1rem;
+    border-color: black;
+}
+
+.header_search_addr {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    width: 5rem;
+    padding: 1px 5px;
+    color: rgba(149, 149, 149, 1);
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width: 1px;
+    margin-right: 1rem;
+    border-color: black;
+}
+
+.header_search_menu {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    width: 6rem;
+    color: rgba(149, 149, 149, 1);
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width: 1px;
+    margin-right: 1rem;
+    border-color: black;
+}
+
+
+.header_search_btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+    width: 5rem;
+    color: rgba(149, 149, 149, 1);
+    background-color: white;
+    padding: 0 6px;
+}
+
+.header_search_btn:hover {
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+    width: 5rem;
+    color: white;
+    background-color: black;
+    padding: 0 6px;
 }
