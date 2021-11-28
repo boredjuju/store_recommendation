@@ -4,16 +4,35 @@
 {% block content %}
 
     {% if history_output %}
-
-        {{ hstr.menu }}
-
-    
-        {{ history_output }}
-
+        <div style="display: flex; justify-content: center">
+            <table>
+                <thead>
+                    <th>음식점</th>
+                    <th>주소</th>
+                    <th class="menu">대표메뉴</th>
+                    <th class="avg_score">siksin</th>
+                    <th class="avg_score">dining</th>
+                    <th class="avg_score">google</th>
+                    <th class="avg_score">naver</th>
+                    <th class="pick">pick!</th>
+                </thead>
+                <tbody>
+                {% for store in store_list %}
+                <tr>
+                    <td class="store_name"><a  target="_blank" href="https://www.siksinhot.com/P/{{ store.s_link }}">{{ store.store_name }}</a></td>
+                    <td class="addr"><a  target="_blank" href="https://map.naver.com/v5/search/{{ store.store_addr }}">{{ store.store_addr }}</a></td>
+                    <td class="menu">{{ store.menu }}</td>
+                    <td class="avg_score">{{ store.siksin_avg_score }}</td>
+                    <td class="avg_score">{{ store.dining_avg_score }}</td>
+                    <td class="avg_score">{{ store.google_avg_score }}</td>
+                    <td class="avg_score">{{ store.naver_avg_score }}</td>
+                    <td class="pick">{{ store.pick_avg_score }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% endif %}
 
-
-
-
-
+</script>
 {% endblock %}

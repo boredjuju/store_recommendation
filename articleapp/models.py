@@ -20,6 +20,7 @@ class stores(models.Model):
     google_avg_score = models.FloatField(null=True)
     naver_avg_score = models.FloatField(null=True)
     pick_avg_score= models.FloatField(null=True)
+    menu = models.CharField(max_length=255, null=True)
 
 
 # 검색 기록 저장 (지역, 동, 메뉴)
