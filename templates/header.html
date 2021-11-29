@@ -15,8 +15,7 @@
         </div>
 
         <div>
-            <form action="/article/search/" method="post">
-                {% csrf_token %}
+            <form action="/article/search/" method="get">
                 <div style="display: flex; justify-content: flex-end">
                     <select name="region_input" class="header_search_select">
                         <option>지역</option>

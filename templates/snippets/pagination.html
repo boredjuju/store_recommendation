@@ -1,0 +1,28 @@
+
+<div style="display: flex; justify-content: center;">
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}&region_input={{ request.GET.region_input }}&addr_input={{ request.GET.addr_input }}&menu_input={{ request.GET.menu_input }}"
+        class="page_first">&laquo;previous</a>
+    <a href="{% url 'articleapp:search' %}?page={{ page_obj.previous_page_number }}&region_input={{ request.GET.region_input }}&addr_input={{ request.GET.addr_input }}&menu_input={{ request.GET.menu_input }}"
+        class="page_num">
+        {{ page_obj.previous_page_number }}
+    </a>
+    {% endif %}
+
+    <a href="{% url 'articleapp:search' %}?page={{ page_obj.number }}&region_input={{ request.GET.region_input }}&addr_input={{ request.GET.addr_input }}&menu_input={{ request.GET.menu_input }}"
+        class="page_num">
+        {{ page_obj.number }}
+    </a>
+
+    {% if page_obj.has_next %}
+    <a href="{% url 'articleapp:search' %}?page={{ page_obj.next_page_number }}&region_input={{ request.GET.region_input }}&addr_input={{ request.GET.addr_input }}&menu_input={{ request.GET.menu_input }}"
+        class="page_num">
+        {{ page_obj.next_page_number }}
+    </a>
+    <a href="?page={{ page_obj.paginator.num_pages }}&region_input={{ request.GET.region_input }}&addr_input={{ request.GET.addr_input }}&menu_input={{ request.GET.menu_input }}"
+        class="page_last">
+        last &raquo;
+    </a>
+    {% endif %}
+</div>
+

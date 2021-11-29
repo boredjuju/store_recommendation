@@ -12,8 +12,7 @@
             <p class="index_logo">GwangShinDo's Pick!</p>
         </div>
         <div>
-            <form action="/article/search/" method="post" class="search_button" >
-                {% csrf_token %}
+            <form action="/article/search/" method="get" class="search_button" >
                 <div>
                     <select name="region_input" class="index_search_bar">
                         <option>지역</option>
