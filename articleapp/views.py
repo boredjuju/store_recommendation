@@ -7,12 +7,40 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from articleapp.models import history, stores
-
+import pandas as pd
 
 def hello_world(request):
     return render(request, 'articleapp/hello_world.html')
 
 def index(request):
+    #
+    # print('view')
+    # df = pd.read_csv('C:/Users/hy949/PycharmProjects/store_recommendation/articleapp/final_info.csv', encoding='utf-8')
+    # # print(len(df))
+    # for i in range(len(df)):
+    #     new_store= stores()
+    #     new_store.id = df.loc[i][0]
+    #     new_store.store_id = df.loc[i][1]
+    #     new_store.region = df.loc[i][2]
+    #     new_store.store_name = df.loc[i][3]
+    #     new_store.store_x = df.loc[i][4]
+    #     new_store.store_y = df.loc[i][5]
+    #     new_store.store_addr = df.loc[i][6]
+    #     new_store.store_addr_new = df.loc[i][7]
+    #     new_store.store_tel = df.loc[i][8]
+    #     new_store.open_hours = df.loc[i][9]
+    #     new_store.website = df.loc[i][10]
+    #     new_store.s_link = df.loc[i][11]
+    #     new_store.siksin_avg_score = df.loc[i][12]
+    #     new_store.dining_avg_score = df.loc[i][13]
+    #     new_store.google_avg_score = df.loc[i][14]
+    #     new_store.naver_avg_score = df.loc[i][15]
+    #     new_store.pick_avg_score = df.loc[i][16]
+    #     new_store.menu = df.loc[i][17]
+    #
+    #     new_store.save()
+    #     print(i)
+    #     #
 
     return render(request, 'articleapp/index.html')
 
@@ -135,11 +163,11 @@ class StoreListView(ListView):
 
         elif (addr_input != '') & (menu_input == ''):
             store_list = stores.objects.filter(Q(region=region_input) &
-                                               Q(menu=menu_input)).order_by('-pick_avg_score')
+                                               Q(menu__contains=menu_input)).order_by('-pick_avg_score')
 
         else:
             store_list = stores.objects.filter(Q(region=region_input) &
-                                               Q(menu=menu_input) &
+                                               Q(menu__contains=menu_input) &
                                                Q(store_addr__contains=addr_input)).order_by('-pick_avg_score')
 
         # context= { 'store_list' : store_list, 'region_inpit' : region_input}

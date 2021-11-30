@@ -18,8 +18,8 @@
             <form action="/article/search/" method="get">
                 <div style="display: flex; justify-content: flex-end">
                     <select name="region_input" class="header_search_select">
-                        <option>지역</option>
-                            <option selected="selected" value= "경기">경기,서울</option>
+                        <option selected="selected">지역</option>
+                            <option value= "경기">경기,서울</option>
                             <option>인천</option>
                             <option>부산</option>
                             <option>대구</option>
@@ -28,7 +28,7 @@
                             <option>울산</option>
 
                     </select>
-                    <input type="text" name="addr_input" class="header_search_addr" placeholder="동 or 군">
+                    <input type="text" name="addr_input" class="header_search_addr" placeholder="군 or 구 or 동">
                     <input type="text" name="menu_input" class="header_search_menu" placeholder="메뉴">
                     <input type="submit" class="header_search_btn" value="search">
                 </div>

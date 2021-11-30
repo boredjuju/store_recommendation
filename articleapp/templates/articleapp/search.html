@@ -2,6 +2,14 @@
 
 
 {% block content %}
+    <div style="width: 80rem;">
+        <span>검색 결과</span>
+        <span>지역: {{ request.GET.region_input }}</span>
+        <span>군, 구, 동: {{ request.GET.addr_input }}</span>
+        <span>카테고리: {{ request.GET.menu_input }}</span>
+    </div>
+
+    <hr>
 
     {% if store_list %}
     <div style="display: flex; justify-content: center">

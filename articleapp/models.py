@@ -4,17 +4,17 @@ from django.db import models
 
 # 음식점 데이터 저장
 class stores(models.Model):
-    store_id = models.IntegerField()
-    region = models.CharField(max_length=255, null=False)
-    store_name = models.CharField(max_length=255, null=False)
+    store_id = models.IntegerField(null=True)
+    region = models.CharField(max_length=255, null=True)
+    store_name = models.CharField(max_length=255, null=True)
     store_x = models.FloatField(null=True)
     store_y = models.FloatField(null=True)
-    store_addr = models.CharField(max_length=255, null=False)
+    store_addr = models.CharField(max_length=255, null=True)
     store_addr_new = models.CharField(max_length=255, null=True)
     store_tel = models.CharField(max_length=255, null=True)
     open_hours = models.CharField(max_length=255, null=True)
     website = models.CharField(max_length=255, null=True)
-    s_link = models.IntegerField(null=False)
+    s_link = models.IntegerField(null=True)
     siksin_avg_score = models.FloatField(null=True)
     dining_avg_score = models.FloatField(null=True)
     google_avg_score = models.FloatField(null=True)
